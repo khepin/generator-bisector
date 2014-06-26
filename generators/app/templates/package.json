@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp-rename": "^1",
+    "gulp-template": "^0",
+    "gulp": "~3",
+    "gulp-angular-templatecache": "~1",
+    "gulp-clean": "~0",
+    "gulp-concat": "~2",
+    "gulp-html-replace": "^0",
+    "gulp-jshint": "~1",
+    "gulp-karma": "*",
+    "gulp-minify-html": "~0",
+    "gulp-protractor": "0",
+    "gulp-requirejs": "~0",
+    "gulp-uglify": "~0",
+    "gulp-util": "~2",
+    "jshint-stylish": "^0",
+    "karma": "*",
+    "karma-chrome-launcher": "*",
+    "karma-coverage": "*",
+    "karma-firefox-launcher": "*",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "*",
+    "karma-requirejs": "*",
+    "karma-script-launcher": "*",
+    "protractor": "*",
+    "lodash": "~2"
+  }
+}
