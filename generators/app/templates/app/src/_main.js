@@ -2,7 +2,9 @@ define([
     'angular',
     'restangular',
 
+    // <bisector:require:modules>
     'modules/default/default_module',
+    // </bisector:require:modules>
 
     'templates',
     'config'
@@ -16,7 +18,9 @@ define([
         'ngRoute',
         'restangular',
 
+        // <bisector:di:modules>
         'default'
+        // </bisector:di:modules>
     ])
     .config(['$routeProvider', 'RestangularProvider',
         function($routeProvider, RAProvider) {
