@@ -59,9 +59,16 @@ var BisectorGenerator = yeoman.generators.NamedBase.extend({
     this.mkdir('app/src/modules');
     this.mkdir('app/src/modules/default');
     this.mkdir('app/src/modules/default/controllers');
+    this.mkdir('app/src/modules/default/directives');
+    this.mkdir('app/src/modules/default/filters');
+    this.mkdir('app/src/modules/default/services');
     this.mkdir('app/src/modules/default/templates');
     this.mkdir('app/src/modules/default/tests');
     this.mkdir('app/src/modules/default/tests/unit');
+    this.mkdir('app/src/modules/default/tests/unit/controllers');
+    this.mkdir('app/src/modules/default/tests/unit/directives');
+    this.mkdir('app/src/modules/default/tests/unit/filters');
+    this.mkdir('app/src/modules/default/tests/unit/services');
 
     this.copy('app/src/modules/default/default_module.js', 'app/src/modules/default/default_module.js');
     this.copy('app/src/modules/default/controllers/DefaultCtrl.js', 'app/src/modules/default/controllers/DefaultCtrl.js');
