@@ -2,9 +2,9 @@ define([
     'angular',
     'restangular',
 
-    // <bisector:require>
+    // <bisector:require:modules>
     'modules/default/default_module',
-    // </bisector:require>
+    // </bisector:require:modules>
 
     'templates',
     'config'
