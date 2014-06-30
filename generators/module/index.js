@@ -14,31 +14,20 @@ var BisectorGenerator = yeoman.generators.NamedBase.extend({
     this.mkdir('app/src/modules/' + this.name + '/controllers');
     this.mkdir('app/src/modules/' + this.name + '/directives');
     this.mkdir('app/src/modules/' + this.name + '/services');
+    this.mkdir('app/src/modules/' + this.name + '/filters');
     this.mkdir('app/src/modules/' + this.name + '/templates');
     this.mkdir('app/src/modules/' + this.name + '/tests');
     this.mkdir('app/src/modules/' + this.name + '/tests/unit');
+    this.mkdir('app/src/modules/' + this.name + '/tests/unit/controllers');
+    this.mkdir('app/src/modules/' + this.name + '/tests/unit/directives');
+    this.mkdir('app/src/modules/' + this.name + '/tests/unit/services');
+    this.mkdir('app/src/modules/' + this.name + '/tests/unit/filters');
 
     // Module file
     this.copy('_module.js', 'app/src/modules/' + this.name + '/' + this.name + '_module.js');
   },
 
   includeModule: function() {
-    function notString(string) {
-      return P.custom(function(success, failure){
-        return function(stream, i) {
-          var head = stream.slice(i, i+string.length);
-          if (string !== head) {
-            return success(i+1, stream.charAt(i));
-          }
-          return failure(i, 'not working');
-        };
-      });
-    }
-
-    function join(array) {
-      return array.join('');
-    }
-
     var main = fs.readFileSync('app/src/main.js', 'utf-8');
 
     var modules = fs.readdirSync('app/src/modules')
