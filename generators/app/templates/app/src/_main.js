@@ -15,12 +15,12 @@ define([
     var app = angular.module('<%= name %>', [
         'templates',
 
-        'ngRoute',
-        'restangular',
-
         // <bisector:di:modules>
-        'default'
+        'default',
         // </bisector:di:modules>
+
+        'ngRoute',
+        'restangular'
     ])
     .config(['$routeProvider', 'RestangularProvider',
         function($routeProvider, RAProvider) {

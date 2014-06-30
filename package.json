@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "chalk": "~0.4.0",
-    "parsimmon": "git://github.com/jneen/parsimmon.git",
+    "lodash": "^2.4.1",
     "yeoman-generator": "~0.16.0"
   },
   "devDependencies": {
