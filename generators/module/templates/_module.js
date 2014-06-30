@@ -1,19 +1,18 @@
 define([
-    'angular',
-
     // <bisector:require>
     // </bisector:require>
-], function(
-    angular,
 
+    'angular'
+], function(
     // <bisector:arg>
     // </bisector:arg>
 
+    angular
 ){
     var module = angular.module('<%= name %>', []);
 
-    // <bisector:controllers>
-    // </bisector:controllers>
+    // <bisector:module>
+    // </bisector:module>
 
     return module;
 });
