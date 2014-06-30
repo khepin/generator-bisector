@@ -65,11 +65,11 @@ function NgModule(name) {
     }
 
     this.getElements = function() {
-        return this.getControllers().concat(this.getDirectives()).concat(this.getServices())
+        return this.getControllers().concat(this.getDirectives()).concat(this.getServices()).concat(this.getFilters())
     }
 
     this.getElementsPaths = function() {
-        return this.getControllersPaths().concat(this.getDirectivesPaths()).concat(this.getServicesPaths())
+        return this.getControllersPaths().concat(this.getDirectivesPaths()).concat(this.getServicesPaths()).concat(this.getFiltersPaths())
     }
 
     this._getDeclarations = function(whichElement) {
