@@ -1,47 +1,77 @@
-# generator-bisector [![Build Status](https://secure.travis-ci.org/khepin/generator-bisector.png?branch=master)](https://travis-ci.org/khepin/generator-bisector)
+# bisector yeoman generator
 
-> [Yeoman](http://yeoman.io) generator
+This is a Yeoman generator for writing applications with:
 
+ * Angular & Restangular
+ * Gulp as a build tool
+ * RequireJS
 
-## Getting Started
+The build tool will use Almond.js instead of RequireJS as to generate a single application file.
 
-### What is Yeoman?
+## Installation
 
-Trick question. It's not a thing. It's this guy:
+For now, bisector is not available on NPM yet so you will need to install it via:
 
-![](http://i.imgur.com/JHaAlBJ.png)
+    npm install -g yo
+    git clone git://github.com/khepin/generator-bisector.git
+    cd generator-bisector
+    npm link
 
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
+## Usage
 
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+### Create a project
 
-```
-$ npm install -g yo
-```
+    yo bisector myApp
 
-### Yeoman Generators
+Will create the whole directory structure and install the dependencies for an Angular app called __myApp__.
 
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
+Once you have that, you should run `gulp watch` to rebuild your templates and lint your code on changes.
 
-To install generator-bisector from npm, run:
+### Create a new module
 
-```
-$ npm install -g generator-bisector
-```
+All the code is separated in modules. A module hosts the relevant controllers, templates, directives, services, filters ...
 
-Finally, initiate the generator:
+    yo bisector:module <module_name>
 
-```
-$ yo bisector
-```
+example:
 
-### Getting To Know Yeoman
+    yo bisector:module authentication
 
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
+### Create a controller
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+    yo bisector:controller <module_name>:<controller_name>
 
+example:
 
-## License
+    yo bisector:controller authentication:LoginCtrl
+    yo bisector:controller authentication:LogoutCtrl
 
-MIT
+This will generate your controllers in the authentication module. This will also create the first unit tests file for them. You can run the tests through `karma start`
+
+### Create a directive
+
+    yo bisector:directive <module_name>:<directive_name>
+
+Note that the directive name should be the camel-cased version, not the html dash version. Example:
+
+    yo bisector:directive authentication:myLogin
+
+Will create a directive for `<my-login></my-login>` and the associated unit test file.
+
+### Create a service
+
+    yo bisector:service <module_name>:<service_name>
+
+Example:
+
+    yo bisector:service authentication:SessionUser
+
+Again, the tests are also generated.
+
+### Create a filter
+
+    yo bisector:filter <module_name>:<filter_name>
+
+Example
+
+    yo bisector:filter authentication:SomeFilter
