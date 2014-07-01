@@ -41,6 +41,9 @@ function NgModule(name) {
     }
 
     this._getElements = function(whichElement) {
+        if (!fs.existsSync(this.getDir(whichElement))) {
+            return [];
+        }
         return _.map(fs.readdirSync(this.getDir(whichElement), 'utf-8'), function(ctrl) {
             return ctrl.replace('.js', '')
         })
