@@ -9,8 +9,8 @@ define([
         beforeEach(module('<%= moduleName %>'));
 
         beforeEach(inject(function(_$controller_){
-            $controller = _$controller_
-        }))
+            $controller = _$controller_;
+        }));
 
         it('should be instantiable', function(){
             var ctrl = $controller('<%= controllerName %>');
