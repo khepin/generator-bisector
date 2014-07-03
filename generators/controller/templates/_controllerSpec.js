@@ -15,6 +15,8 @@ define([
         it('should be instantiable', function(){
             var ctrl = $controller('<%= controllerName %>');
             expect(ctrl).toBeDefined();
+
+            expect('This is a generated test, modify it and write your own.').toBe('');
         });
     });
 });

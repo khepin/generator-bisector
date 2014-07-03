@@ -30,6 +30,8 @@ define([
         it('gets contents replaced', function(){
             scope.$apply(function(){});
             expect($(elm).html()).not.toBe('');
+
+            expect('This is a generated test, modify it and write your own.').toBe('');
         });
     });
 });
