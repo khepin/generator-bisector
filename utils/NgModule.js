@@ -104,6 +104,13 @@ function NgModule(name) {
 
         fs.writeFileSync(this.filename, this.file, 'utf-8')
     }
+
+    /**
+     * The name of the folder might defer from the declared angular module name
+     */
+    this.getNgModuleName = function() {
+        return this.file.match(/var module = angular.module\(([^,]*), \[/)[1]
+    }
 }
 
 module.exports = NgModule

@@ -6,7 +6,7 @@ define([
     describe('<%= controllerName %>', function(){
         var $controller;
 
-        beforeEach(module('<%= moduleName %>'));
+        beforeEach(module('<%= ngModuleName %>'));
 
         beforeEach(inject(function(_$controller_){
             $controller = _$controller_;

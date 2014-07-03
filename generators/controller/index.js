@@ -15,6 +15,7 @@ var BisectorGenerator = yeoman.generators.NamedBase.extend({
     this.controllerName = names[1]
 
     this.module = new NgModule(this.moduleName)
+    this.ngModuleName = this.module.getNgModuleName()
   },
   controller: function() {
     this.copy('_controller.js', this.module.getDir('controllers') + this.controllerName + '.js')
