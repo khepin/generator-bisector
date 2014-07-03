@@ -3,6 +3,10 @@ module.exports = function replaceTag(original, tagName, content) {
     var r = new RegExp('\<' + tagName + '\>[^<]*\<\/' + tagName + '\>')
     // How many spaces before the tags
     var s = new RegExp('\n( +)\/\/ \<' + tagName + '\>')
+    var matches = original.match(s)
+    if (!matches) {
+        throw new Error('Could not find tag: ' + tagName)
+    }
     var spaces = original.match(s)[1].length
     // String of "n" spaces
     spaces = '\n' + Array(spaces + 1).join(' ')
