@@ -31,7 +31,7 @@ define([
             scope.$apply(function(){});
             expect($(elm).html()).not.toBe('');
 
-            expect('This is a generated test, modify it and write your own.').toBe('');
+            expect('This generated test').toBe('re-written by you');
         });
     });
 });

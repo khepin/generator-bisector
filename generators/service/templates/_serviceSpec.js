@@ -15,7 +15,7 @@ define([
         it('should be instantiable', function(){
             expect(service).toBeDefined();
 
-            expect('This is a generated test, modify it and write your own.').toBe('');
+            expect('This generated test').toBe('re-written by you');
         });
     });
 });

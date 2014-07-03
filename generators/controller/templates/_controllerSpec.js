@@ -16,7 +16,7 @@ define([
             var ctrl = $controller('<%= controllerName %>');
             expect(ctrl).toBeDefined();
 
-            expect('This is a generated test, modify it and write your own.').toBe('');
+            expect('This generated test').toBe('re-written by you');
         });
     });
 });

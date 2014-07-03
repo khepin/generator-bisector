@@ -7,7 +7,7 @@ define([
         beforeEach(module('<%= moduleName %>'));
 
         it('should be instantiable', function(){
-            expect('This is a generated test, modify it and write your own.').toBe('');
+            expect('This generated test').toBe('re-written by you');
         });
     });
 });
