@@ -39,7 +39,7 @@ var BisectorGenerator = yeoman.generators.NamedBase.extend({
 
     var ngNames = _.map(modules, function(mod){
         var file = fs.readFileSync('app/src/modules/' + mod + '/' + mod + '_module.js', 'utf-8')
-        return file.match(/var module = angular.module\(([^,]*), \[/)[1]
+        return file.match(/var module = angular.module\(([^,]*), \[/)[1] + ','
     })
 
     main = replaceTag(main, 'bisector:di:modules', ngNames)
