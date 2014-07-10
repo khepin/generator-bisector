@@ -67,6 +67,13 @@ function NgModule(name) {
         return this.dir + whichElement.replace(/\//g, '') + '/'
     }
 
+    this.ensureDirExists = function(whichElement) {
+        var dir = this.getDir(whichElement)
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir)
+        }
+    }
+
     this.getElements = function() {
         return this.getControllers().concat(this.getDirectives()).concat(this.getServices()).concat(this.getFilters())
     }

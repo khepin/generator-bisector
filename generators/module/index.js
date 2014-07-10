@@ -11,10 +11,6 @@ var BisectorGenerator = yeoman.generators.NamedBase.extend({
   module: function() {
     // Directory structure
     this.mkdir('app/src/modules/' + this.name);
-    this.mkdir('app/src/modules/' + this.name + '/controllers');
-    this.mkdir('app/src/modules/' + this.name + '/directives');
-    this.mkdir('app/src/modules/' + this.name + '/services');
-    this.mkdir('app/src/modules/' + this.name + '/filters');
     this.mkdir('app/src/modules/' + this.name + '/templates');
     this.mkdir('app/src/modules/' + this.name + '/tests');
     this.mkdir('app/src/modules/' + this.name + '/tests/unit');

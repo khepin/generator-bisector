@@ -30,6 +30,7 @@ var BisectorGenerator = yeoman.generators.NamedBase.extend({
     }.bind(this));
   },
   directive: function() {
+    this.module.ensureDirExists('directives')
     this.copy('_template.html', this.module.getDir('templates') + this.templateName + '.html')
     this.copy('_directive.js', this.module.getDir('directives') + this.directiveName + '.js')
   },

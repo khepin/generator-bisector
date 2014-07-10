@@ -17,6 +17,7 @@ var BisectorGenerator = yeoman.generators.NamedBase.extend({
     this.module = new NgModule(this.moduleName)
   },
   directive: function() {
+    this.module.ensureDirExists('filters')
     this.copy('_filter.js', this.module.getDir('filters') + this.filterName + '.js')
   },
   loadController: function() {
